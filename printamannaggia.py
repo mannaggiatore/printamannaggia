@@ -41,7 +41,7 @@ def mannaggia(buttons):
             continue
         btn_key += '%d%s' % (btn_val, btn)
     print 'Db key:', btn_key
-    db = MANNAGGIA_DB_MAPPING.get(btn_key, 'db/santi_e_beati.txt')
+    db = MANNAGGIA_DB_MAPPING.get(btn_key, 'santi_e_beati.txt')
     cmd = MANNAGGIA_CMD % {'dbname': os.path.join(MANNAGGIA_DB_DIR, db)}
     print 'Running command: %s' % cmd
     p = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
